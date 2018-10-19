@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Application B</string>
+    <string name="link_deleted_message">The link %d was deleted from database</string>
+    <string name="independent_launch_message">The application could not work independently \n and will be closed in %d s</string>
+</resources>

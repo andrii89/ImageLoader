@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.android.applicationb">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.test.android.applicationa.database.READ"/>
+    <uses-permission android:name="com.test.android.applicationa.database.WRITE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.BackgroundService"
+            android:exported="false"/>
+
+        <receiver
+            android:name=".receivers.ResponseBroadcastReceiver"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.test.android.applicationb.receivers.ResponseBroadcastReceiver"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receivers.ToastBroadcastReceiver"
+            android:process=":remote" >
+        </receiver>
+    </application>
+
+</manifest>

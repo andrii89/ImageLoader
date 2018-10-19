@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Application A</string>
+    <string name="link_input_hint">Enter the link to image</string>
+    <string name="ok_button">OK</string>
+    <string name="menu_item_sort_status">Sort by status</string>
+    <string name="menu_item_sort_time">Sort by time</string>
+</resources>
